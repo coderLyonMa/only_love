@@ -140,7 +140,7 @@ export default {
   methods: {
     getItemsPurchasedToday() {
       console.log('hello');
-      const path = 'http://localhost:5000/items-today';
+      const path = 'http://54.251.25.117:5000/items-today';
       axios.get(path, {
         data: {},
         params: {
@@ -157,7 +157,7 @@ export default {
         });
     },
     addItemPurchased(payload) {
-      const path = 'http://localhost:5000/add-items-purchased';
+      const path = 'http://54.251.25.117:5000/add-items-purchased';
       axios.post(path, payload)
         .then(() => {
           this.getItemsPurchasedToday();
@@ -175,7 +175,7 @@ export default {
       this.addItemForm.price = 0.0;
     },
     onDeleteItem(itemID) {
-      const path = `http://localhost:5000/delete-item/${itemID}`;
+      const path = `http://54.251.25.117:5000/delete-item/${itemID}`;
       axios.delete(path)
         .then(() => {
           this.getItemsPurchasedToday();
