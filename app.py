@@ -6,7 +6,7 @@ import os
 import mysql.connector
 
 # instantiate the app
-app = Flask(__name__, static_folder='static/', template_folder='static/')
+app = Flask(__name__, static_folder='static/', template_folder='client/dist/')
 
 
 @app.route('/')
